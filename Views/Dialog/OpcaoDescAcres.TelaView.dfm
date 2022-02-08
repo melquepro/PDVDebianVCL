@@ -1,0 +1,209 @@
+object FrmDescAcres: TFrmDescAcres
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'Opcao de Desconto'
+  ClientHeight = 365
+  ClientWidth = 433
+  Color = 15066597
+  TransparentColor = True
+  TransparentColorValue = 15066597
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  KeyPreview = True
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
+  PixelsPerInch = 96
+  TextHeight = 15
+  object pnlFundo: TPanel
+    Left = 8
+    Top = 8
+    Width = 414
+    Height = 349
+    BevelOuter = bvNone
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 0
+    object Label2: TLabel
+      Left = 0
+      Top = 292
+      Width = 414
+      Height = 57
+      Align = alBottom
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '[ESC] Cancelar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -19
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Layout = tlCenter
+      ExplicitTop = 286
+    end
+    object Label3: TLabel
+      Left = 72
+      Top = 216
+      Width = 141
+      Height = 25
+      Caption = 'Desconto em R$'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -19
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 72
+      Top = 254
+      Width = 134
+      Height = 25
+      Caption = 'Desconto em %'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -19
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Shape1: TShape
+      Left = 36
+      Top = 215
+      Width = 28
+      Height = 28
+      Pen.Color = 9671571
+      Shape = stRoundRect
+    end
+    object Shape2: TShape
+      Left = 36
+      Top = 253
+      Width = 28
+      Height = 27
+      Pen.Color = 9671571
+      Shape = stRoundRect
+    end
+    object Label5: TLabel
+      Left = 44
+      Top = 217
+      Width = 11
+      Height = 25
+      Caption = '1'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -19
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 44
+      Top = 253
+      Width = 11
+      Height = 25
+      Caption = '2'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -19
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Panel2: TPanel
+      Left = 0
+      Top = 0
+      Width = 414
+      Height = 169
+      Align = alTop
+      BevelOuter = bvNone
+      Color = 7290415
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -32
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 0
+      object Image1: TImage
+        Left = 168
+        Top = 14
+        Width = 89
+        Height = 84
+        Center = True
+        Picture.Data = {
+          0954506E67496D61676589504E470D0A1A0A0000000D49484452000000640000
+          0064080600000070E2955400000006624B474400FF00FF00FFA0BDA793000005
+          9B4944415478DAED9D6BA8554514C7E79884989494268AE4ED299A854171433F
+          14524882BDC8D0B48724926011A190426596DDA007947D2809122A252A8AA850
+          49B3B088B22785A562410F338DE8A5A9E9EDBF9873A8649FBBCFCC9E33F3DFFB
+          AC1F2CD6877DD762CDFCEF3E7BCFECD9B36B46A1A296BA00E5FFA82064A82064
+          A82064A82064A82064A82064A82064A82064A82064A820640417A4B7B7B73FDC
+          445817EC44D809A91B19983DB0DDB0AF61EFD46AB5432193071304429C047707
+          EC4AD8F1317B28213FC35E84DD0B61BE0D91B0B02010A29FB142DC0E1B90B47B
+          D2B10FD663AC30BD4512151204621C03F72CECB2D43D42C24BB06B21CA9FBE09
+          BC05811847C1BD069B9CBA17C8780576054439EC135C4410F989EA49DD7A5216
+          4290077D02BD04A95FC0BF329D7BCDC843AE29A37D2EF4BE822C879B9FBAD5E4
+          3C02416E750D7216A47EEDF8C1D83186D29C5DB011AED7121F41BAE1DE4BDDDA
+          92701E04D9EC12E023C82CB8A753B7B424CC8420AB5C027C045900F740EA9696
+          840510E42197001F4196C0DD95BAA525E16E08B2C42540677BC95041C85041C8
+          5041C85041C85041C8F0B9ED9D0B373775E12561056E7B57B804E838A4BDB47F
+          1CA28238A18290A18290A18290A18290A18290412DC85ED806D81698D7129904
+          C822C031B049B0811EF1B482C83AD8C9286E5B906E8A0CDA7C06DC5A63D72BBB
+          402BC85414F66AB82E8A0FDA2DAB335F760CA315E43814F65BC80E8A0DDA3D18
+          EE17C7305A41C6A2B02D213B283668F799709F3B86D10AB20A85CD0CD941B141
+          BB57C34D770CA315449085D94F18BBC8AE4C8C80DD049BE2114B2D4827A28290
+          A18290A18290A18290A18290412FC89730597CFC164CDEEF1E059B63ECFD7DBF
+          881D150B6A419E37F60DD5FD19392F877B0E7674946E8A07AD201FC3CE477107
+          FAC87B33DCA37DE490587991F275D8CE30FD954B63FABD7203C36928EC859CBC
+          B225C777B0614DFE445E35769D6D0D46D5A64E86A2B03D2DE4969FB5AB320E7D
+          81F871AEB586A46A938B03B2AE1D19B99F84BB31E3D03AC427DDA0A023A7DF91
+          7B23DC051987E4ECEA2AB2654551AAF680AA07852DCEC97B8AB19B11F46FF227
+          F2F2E41CE4D9E75A7351AAF808573A71028AFBA4494E79F77D0DECA29C3CB233
+          C2DBB098678A4CBF576E9183209B7E5D8302DF38229FDC55C90AF14BFDFA8B1A
+          6A411A7C0A7BD7D8B3467E0A7CFFFBCA402904E9245410325410324A21C81FB0
+          0FCCBFB3BDA7C7EB9FE8500BB2BF1EB71C45EEFD4F3E19083E064B3A35D22668
+          0591B3610A8A5BD724A76CA6B909363E27CF5FC63E53C99D170B84CCF69E6CEC
+          99ECF3BC865690C751D8BC9CBCE7C07DD8474DB2725EC631BB3C3AA610A8ED42
+          639FE70C710CA515A4A58DBC905BAE2DE7661CFA1D762A72EC76AD3714A8ED7A
+          B8958E61B4820C6C650E0AB99F82BB21E3D09B889FE45A6B4850DB50B89F1CC3
+          6805198CC27E6D21B74C20CEC838F43EE2BB5D6B0D096AEB32F63D17176805B9
+          0485ADC9C92BB5EC30D933AA7FC3BA91E323D77A4381FA96C12D760CA315643D
+          ECE2BEF64547DEAB8D5DE8D08CEF61B7C0D6C67C2E82BA1A8BAD1799E68F069A
+          412B88708FC46589829C67C16D34D5FBAA4214418A6C82292B4696C236CB7737
+          EAFF7DD719FB75852ACEF846D904535EBC79A660A1078D1DB90F8AD737499071
+          D36A9700DD48B9BD44D94859A61064FDD4F0D4AD25471E378F72FDC08B6EC6DF
+          3EE26CC62FD447ADDB61C7A66E352932083EAD95C5814752E4832E725F7E5FEA
+          969312F7832E427D642D531DAEEB5DABCE4A8831DB37B8E847C1E4B65544999A
+          BA174890958DB3927C14AC41FDAEEB4ED84253CDC15D2BC813D0FB61CB7C3F06
+          D620E48725E536F836D834639FB07502DF18FBE0EA6108F16388846DD94819E2
+          9C0D371A36D254EFAD2899619071D85688F059E8E4BAB335192A08192A08192A
+          08192A08192A08192A08192A08192A08192A08192A08192A0819FF0013465183
+          CAA679A10000000049454E44AE426082}
+        Stretch = True
+      end
+      object Label1: TLabel
+        Left = 0
+        Top = 119
+        Width = 125
+        Height = 50
+        Align = alBottom
+        Alignment = taCenter
+        Caption = 'Op'#231'oes'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -37
+        Font.Name = 'Segoe UI Semibold'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
+  end
+end
