@@ -1464,7 +1464,7 @@ object FrmFrCaixa: TFrmFrCaixa
     ParentFont = False
     TabOrder = 1
     object EdtDescProduto: TEdit
-      Left = 1
+      Left = 6
       Top = 0
       Width = 1068
       Height = 85
