@@ -1,2 +1,2 @@
 # PDVDebianVCL
- PDV com telas intuitivas
+ PDV VCL com telas intuitivas
