@@ -1559,7 +1559,7 @@ object FrmFrCaixa: TFrmFrCaixa
     Top = 156
     Width = 749
     Height = 591
-    ActivePage = tabSubTotal
+    ActivePage = tabItem
     Anchors = [akTop, akRight, akBottom]
     Style = tsFlatButtons
     TabOrder = 3
