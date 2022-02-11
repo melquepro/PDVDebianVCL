@@ -84,6 +84,12 @@ implementation
 
 uses Esmaecer.TelaFundo, Funcao.Classe, uConexao, OpcaoDescAcres.TelaView;
 
+// Quando finalizar o pagamento voce chama o resumo da venda que vai ser criado na tela Principal;
+{procedure ResumoVenda;
+begin
+   //
+end;
+   }
 procedure TFrmFormaPagamento.Button1Click(Sender: TObject);
 begin
 

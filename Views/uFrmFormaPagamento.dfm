@@ -82,6 +82,7 @@ object FrmFormaPagamento: TFrmFormaPagamento
             Height = 110
             ExplicitHeight = 110
             inherited lblTipoPg: TLabel
+              Width = 229
               Height = 104
               Color = 8085537
             end

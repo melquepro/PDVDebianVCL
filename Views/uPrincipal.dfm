@@ -5,8 +5,8 @@ object FrmFrCaixa: TFrmFrCaixa
   AlphaBlendValue = 220
   BorderStyle = bsNone
   Caption = 'win_frcaixa'
-  ClientHeight = 841
-  ClientWidth = 1117
+  ClientHeight = 843
+  ClientWidth = 1133
   Color = 12612715
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,19 +19,21 @@ object FrmFrCaixa: TFrmFrCaixa
   WindowState = wsMaximized
   OnActivate = FormActivate
   OnAfterMonitorDpiChanged = FormAfterMonitorDpiChanged
+  OnCreate = FormCreate
   OnKeyDown = FormKeyDown
   OnKeyPress = FormKeyPress
   OnKeyUp = FormKeyUp
   OnResize = FormResize
+  OnShow = FormShow
   PixelsPerInch = 96
   DesignSize = (
-    1117
-    841)
+    1133
+    843)
   TextHeight = 15
   object imgMarca: TImage
-    Left = 33
-    Top = 408
-    Width = 201
+    Left = 41
+    Top = 400
+    Width = 217
     Height = 114
     Anchors = [akLeft, akTop, akRight]
     Center = True
@@ -668,12 +670,12 @@ object FrmFrCaixa: TFrmFrCaixa
       D8DE3EAA7FCAB058A8FF7B5E4551135751D4C45514357115454D5C4551135751
       D4C45514357115C5BF3DA9E7B6FB6903DE0000000049454E44AE426082}
     Transparent = True
-    ExplicitWidth = 185
+    ExplicitWidth = 201
   end
   object pnlButtom: TPanel
     Left = 0
-    Top = 792
-    Width = 1117
+    Top = 794
+    Width = 1133
     Height = 49
     Align = alBottom
     BevelOuter = bvNone
@@ -681,7 +683,7 @@ object FrmFrCaixa: TFrmFrCaixa
     ParentBackground = False
     TabOrder = 0
     object pnlLogo: TPanel
-      Left = 980
+      Left = 996
       Top = 0
       Width = 137
       Height = 49
@@ -1449,7 +1451,7 @@ object FrmFrCaixa: TFrmFrCaixa
   object pnlDescricao: TPanel
     Left = 18
     Top = 58
-    Width = 1064
+    Width = 1080
     Height = 92
     Anchors = [akLeft, akTop, akRight]
     BevelOuter = bvNone
@@ -1488,209 +1490,16 @@ object FrmFrCaixa: TFrmFrCaixa
       OnKeyPress = EdtDescProdutoKeyPress
     end
   end
-  object pnlListItem: TPanel
-    Left = 224
-    Top = 184
-    Width = 858
-    Height = 563
-    Anchors = [akTop, akRight, akBottom]
-    BevelOuter = bvNone
-    Color = 7290415
-    ParentBackground = False
-    TabOrder = 2
-    object lbListProdutos: TScrollBox
-      Left = 0
-      Top = 49
-      Width = 858
-      Height = 426
-      HorzScrollBar.Style = ssFlat
-      HorzScrollBar.Visible = False
-      VertScrollBar.Increment = 36
-      VertScrollBar.ParentColor = False
-      VertScrollBar.Style = ssFlat
-      Align = alClient
-      BorderStyle = bsNone
-      Color = clWhite
-      ParentColor = False
-      TabOrder = 0
-    end
-    object pnlNomeCliente: TPanel
-      Left = 0
-      Top = 0
-      Width = 858
-      Height = 49
-      Align = alTop
-      BevelOuter = bvNone
-      Color = 5121313
-      Padding.Left = 10
-      ParentBackground = False
-      TabOrder = 1
-      object lblNomeCliente: TLabel
-        Left = 10
-        Top = 0
-        Width = 848
-        Height = 49
-        Align = alClient
-        Caption = 'PRODUTO'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWhite
-        Font.Height = -21
-        Font.Name = 'Segoe UI Semibold'
-        Font.Style = [fsBold]
-        ParentFont = False
-        Layout = tlCenter
-        ExplicitWidth = 98
-        ExplicitHeight = 30
-      end
-    end
-    object pnlValores: TPanel
-      Left = 0
-      Top = 475
-      Width = 858
-      Height = 88
-      Align = alBottom
-      BevelOuter = bvNone
-      Color = 5121313
-      ParentBackground = False
-      TabOrder = 2
-      object pnlTotal: TPanel
-        Left = 661
-        Top = 0
-        Width = 197
-        Height = 88
-        Align = alRight
-        Alignment = taRightJustify
-        BevelOuter = bvNone
-        BiDiMode = bdLeftToRight
-        Color = 5121313
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Padding.Right = 7
-        ParentBiDiMode = False
-        ParentBackground = False
-        ParentFont = False
-        TabOrder = 0
-        VerticalAlignment = taAlignTop
-        object Label4: TLabel
-          Left = 0
-          Top = 0
-          Width = 190
-          Height = 30
-          Align = alTop
-          Alignment = taRightJustify
-          Caption = 'TOTAL (R$)'
-          Color = 16741749
-          Font.Charset = ANSI_CHARSET
-          Font.Color = 16741749
-          Font.Height = -21
-          Font.Name = 'Segoe UI'
-          Font.Style = [fsBold]
-          ParentColor = False
-          ParentFont = False
-          ExplicitLeft = 79
-          ExplicitWidth = 111
-        end
-        object lblVlrTotal: TLabel
-          Left = 0
-          Top = 17
-          Width = 190
-          Height = 71
-          Align = alBottom
-          Alignment = taRightJustify
-          Caption = '45,20'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWhite
-          Font.Height = -53
-          Font.Name = 'Segoe UI'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Layout = tlCenter
-          ExplicitLeft = 56
-          ExplicitWidth = 134
-        end
-      end
-      object pnlSubValoresTotal: TPanel
-        Left = 0
-        Top = 0
-        Width = 329
-        Height = 88
-        Align = alLeft
-        Alignment = taRightJustify
-        BevelOuter = bvNone
-        BiDiMode = bdLeftToRight
-        Color = 5121313
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Padding.Left = 5
-        ParentBiDiMode = False
-        ParentBackground = False
-        ParentFont = False
-        TabOrder = 1
-        VerticalAlignment = taAlignTop
-        object Label3: TLabel
-          Left = 5
-          Top = 50
-          Width = 324
-          Height = 25
-          Align = alTop
-          Caption = 'Desconto: R$ 0,00'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWhite
-          Font.Height = -19
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          ExplicitWidth = 148
-        end
-        object lblSubTotal: TLabel
-          Left = 5
-          Top = 25
-          Width = 324
-          Height = 25
-          Align = alTop
-          Caption = 'SubTotal: R$ 45,20'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWhite
-          Font.Height = -19
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          ExplicitWidth = 151
-        end
-        object LblQtdItem: TLabel
-          Left = 5
-          Top = 0
-          Width = 324
-          Height = 25
-          Align = alTop
-          Caption = 'Quantidade: 0 itens'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWhite
-          Font.Height = -19
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          ExplicitWidth = 163
-        end
-      end
-    end
-  end
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 1117
+    Width = 1133
     Height = 33
     Align = alTop
     BevelOuter = bvNone
     Color = 5121313
     ParentBackground = False
-    TabOrder = 3
+    TabOrder = 2
     object lblCxOperador: TLabel
       AlignWithMargins = True
       Left = 10
@@ -1717,7 +1526,7 @@ object FrmFrCaixa: TFrmFrCaixa
     end
     object lblDataHora: TLabel
       AlignWithMargins = True
-      Left = 861
+      Left = 877
       Top = 0
       Width = 246
       Height = 33
@@ -1741,6 +1550,438 @@ object FrmFrCaixa: TFrmFrCaixa
       ExplicitHeight = 25
     end
   end
+  object pgItem: TPageControl
+    Left = 220
+    Top = 156
+    Width = 878
+    Height = 591
+    ActivePage = tabSubTotal
+    Anchors = [akTop, akRight, akBottom]
+    Style = tsFlatButtons
+    TabOrder = 3
+    OnDrawTab = pgItemDrawTab
+    object tabItem: TTabSheet
+      Caption = 'ITENS'
+      object pnlListItem: TPanel
+        Left = 0
+        Top = 0
+        Width = 870
+        Height = 558
+        Align = alClient
+        BevelOuter = bvNone
+        Color = 7290415
+        ParentBackground = False
+        TabOrder = 0
+        object lbListProdutos: TScrollBox
+          Left = 0
+          Top = 49
+          Width = 870
+          Height = 421
+          HorzScrollBar.Style = ssFlat
+          HorzScrollBar.Visible = False
+          VertScrollBar.Increment = 36
+          VertScrollBar.ParentColor = False
+          VertScrollBar.Style = ssFlat
+          Align = alClient
+          BorderStyle = bsNone
+          Color = clWhite
+          ParentColor = False
+          TabOrder = 0
+        end
+        object pnlNomeCliente: TPanel
+          Left = 0
+          Top = 0
+          Width = 870
+          Height = 49
+          Align = alTop
+          BevelOuter = bvNone
+          Color = 5121313
+          Padding.Left = 10
+          ParentBackground = False
+          TabOrder = 1
+          object lblNomeCliente: TLabel
+            Left = 10
+            Top = 0
+            Width = 860
+            Height = 49
+            Align = alClient
+            Caption = 'PRODUTO'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWhite
+            Font.Height = -21
+            Font.Name = 'Segoe UI Semibold'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Layout = tlCenter
+            ExplicitWidth = 98
+            ExplicitHeight = 30
+          end
+        end
+        object pnlValores: TPanel
+          Left = 0
+          Top = 470
+          Width = 870
+          Height = 88
+          Align = alBottom
+          BevelOuter = bvNone
+          Color = 5121313
+          ParentBackground = False
+          TabOrder = 2
+          object pnlTotal: TPanel
+            Left = 673
+            Top = 0
+            Width = 197
+            Height = 88
+            Align = alRight
+            Alignment = taRightJustify
+            BevelOuter = bvNone
+            BiDiMode = bdLeftToRight
+            Color = 5121313
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -16
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Padding.Right = 7
+            ParentBiDiMode = False
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 0
+            VerticalAlignment = taAlignTop
+            object Label4: TLabel
+              Left = 0
+              Top = 0
+              Width = 190
+              Height = 30
+              Align = alTop
+              Alignment = taRightJustify
+              Caption = 'TOTAL (R$)'
+              Color = 16741749
+              Font.Charset = ANSI_CHARSET
+              Font.Color = 16741749
+              Font.Height = -21
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentColor = False
+              ParentFont = False
+              ExplicitLeft = 79
+              ExplicitWidth = 111
+            end
+            object lblVlrTotal: TLabel
+              Left = 0
+              Top = 17
+              Width = 190
+              Height = 71
+              Align = alBottom
+              Alignment = taRightJustify
+              Caption = '45,20'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clWhite
+              Font.Height = -53
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+              Layout = tlCenter
+              ExplicitLeft = 56
+              ExplicitWidth = 134
+            end
+          end
+          object pnlSubValoresTotal: TPanel
+            Left = 0
+            Top = 0
+            Width = 329
+            Height = 88
+            Align = alLeft
+            Alignment = taRightJustify
+            BevelOuter = bvNone
+            BiDiMode = bdLeftToRight
+            Color = 5121313
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -16
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Padding.Left = 5
+            ParentBiDiMode = False
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 1
+            VerticalAlignment = taAlignTop
+            object Label3: TLabel
+              Left = 5
+              Top = 50
+              Width = 324
+              Height = 25
+              Align = alTop
+              Caption = 'Desconto: R$ 0,00'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clWhite
+              Font.Height = -19
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+              ExplicitWidth = 148
+            end
+            object lblSubTotal: TLabel
+              Left = 5
+              Top = 25
+              Width = 324
+              Height = 25
+              Align = alTop
+              Caption = 'SubTotal: R$ 45,20'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clWhite
+              Font.Height = -19
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+              ExplicitWidth = 151
+            end
+            object LblQtdItem: TLabel
+              Left = 5
+              Top = 0
+              Width = 324
+              Height = 25
+              Align = alTop
+              Caption = 'Quantidade: 0 itens'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clWhite
+              Font.Height = -19
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+              ExplicitWidth = 163
+            end
+          end
+        end
+      end
+    end
+    object tabSubTotal: TTabSheet
+      Caption = 'SUBTOTAL'
+      ImageIndex = 1
+      object Splitter2: TSplitter
+        AlignWithMargins = True
+        Left = 3
+        Top = 435
+        Width = 864
+        Height = 18
+        Cursor = crDefault
+        Align = alBottom
+        ResizeStyle = rsNone
+        ExplicitLeft = -4
+      end
+      object pnlResFundo: TPanel
+        Left = 0
+        Top = 0
+        Width = 870
+        Height = 432
+        Align = alClient
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 0
+        object pnl: TPanel
+          Left = 0
+          Top = 0
+          Width = 870
+          Height = 42
+          Align = alTop
+          BevelOuter = bvNone
+          Color = 5121313
+          Padding.Left = 10
+          ParentBackground = False
+          TabOrder = 0
+          object Label1: TLabel
+            Left = 10
+            Top = 0
+            Width = 860
+            Height = 42
+            Align = alClient
+            Caption = 'RESUMO DA VENDA'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWhite
+            Font.Height = -21
+            Font.Name = 'Segoe UI Semibold'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Layout = tlCenter
+            ExplicitWidth = 195
+            ExplicitHeight = 30
+          end
+        end
+        object Panel1: TPanel
+          Left = 0
+          Top = 352
+          Width = 870
+          Height = 80
+          Align = alBottom
+          BevelOuter = bvNone
+          Color = 5121313
+          ParentBackground = False
+          TabOrder = 1
+          object Label2: TLabel
+            AlignWithMargins = True
+            Left = 717
+            Top = 3
+            Width = 150
+            Height = 74
+            Align = alRight
+            BiDiMode = bdRightToLeft
+            Caption = '150,00'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWhite
+            Font.Height = -53
+            Font.Name = 'Segoe UI Semibold'
+            Font.Style = [fsBold]
+            ParentBiDiMode = False
+            ParentFont = False
+            Layout = tlCenter
+            ExplicitHeight = 71
+          end
+          object Label5: TLabel
+            Left = 0
+            Top = 0
+            Width = 63
+            Height = 80
+            Align = alLeft
+            Caption = '  TOTAL'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWhite
+            Font.Height = -19
+            Font.Name = 'Segoe UI Semibold'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Layout = tlCenter
+            ExplicitHeight = 25
+          end
+        end
+        object sbResumoVenda: TScrollBox
+          Left = 0
+          Top = 42
+          Width = 870
+          Height = 310
+          Align = alClient
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          BorderStyle = bsNone
+          TabOrder = 2
+        end
+      end
+      object Panel2: TPanel
+        Left = 0
+        Top = 456
+        Width = 870
+        Height = 102
+        Align = alBottom
+        BevelOuter = bvNone
+        Color = 12612715
+        ParentBackground = False
+        TabOrder = 1
+        object Splitter1: TSplitter
+          AlignWithMargins = True
+          Left = 417
+          Top = 3
+          Width = 18
+          Height = 96
+          Cursor = crDefault
+          Align = alRight
+          ResizeStyle = rsNone
+          ExplicitLeft = 414
+        end
+        object pnlValorPago: TPanel
+          Left = 0
+          Top = 0
+          Width = 407
+          Height = 102
+          Align = alLeft
+          Alignment = taLeftJustify
+          BevelOuter = bvNone
+          Color = 12424588
+          ParentBackground = False
+          TabOrder = 0
+          object Label7: TLabel
+            Left = 3
+            Top = 8
+            Width = 118
+            Height = 25
+            Caption = ' VALOR PAGO'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = 3342336
+            Font.Height = -19
+            Font.Name = 'Segoe UI Semibold'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object lblValorPago: TLabel
+            AlignWithMargins = True
+            Left = 3
+            Top = 34
+            Width = 401
+            Height = 65
+            Align = alBottom
+            Caption = '150,00'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = 3342336
+            Font.Height = -48
+            Font.Name = 'Segoe UI Semibold'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ExplicitWidth = 139
+          end
+        end
+        object pnlTroco: TPanel
+          Left = 438
+          Top = 0
+          Width = 432
+          Height = 102
+          Align = alRight
+          Alignment = taLeftJustify
+          BevelOuter = bvNone
+          Color = 6824100
+          ParentBackground = False
+          TabOrder = 1
+          object Label8: TLabel
+            Left = 8
+            Top = 6
+            Width = 63
+            Height = 25
+            Caption = 'TROCO'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWhite
+            Font.Height = -19
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object lblTotalPagar: TLabel
+            AlignWithMargins = True
+            Left = 3
+            Top = 34
+            Width = 426
+            Height = 65
+            Align = alBottom
+            Caption = '0,00'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWhite
+            Font.Height = -48
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ExplicitWidth = 97
+          end
+        end
+      end
+    end
+  end
+  object Button1: TButton
+    Left = 40
+    Top = 296
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 4
+    OnClick = Button1Click
+  end
   object Timer1: TTimer
     Interval = 1
     OnTimer = Timer1Timer
@@ -1748,8 +1989,8 @@ object FrmFrCaixa: TFrmFrCaixa
     Top = 208
   end
   object ImageList1: TImageList
-    Left = 224
-    Top = 296
+    Left = 136
+    Top = 224
     Bitmap = {
       494C010105000800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
@@ -2028,8 +2269,8 @@ object FrmFrCaixa: TFrmFrCaixa
     UpdateTransaction = DM.FDTransaction1
     SQL.Strings = (
       'SELECT * FROM item_venda')
-    Left = 328
-    Top = 296
+    Left = 72
+    Top = 352
     object qryItemVendassiditemvenda: TFDAutoIncField
       FieldName = 'iditemvenda'
       Origin = 'iditemvenda'
@@ -2083,8 +2324,8 @@ object FrmFrCaixa: TFrmFrCaixa
   end
   object dsItemVenda: TDataSource
     DataSet = qryItemVenda
-    Left = 328
-    Top = 408
+    Left = 40
+    Top = 520
   end
   object qryItemVenda: TFDTable
     IndexFieldNames = 'iditemvenda'
@@ -2092,8 +2333,8 @@ object FrmFrCaixa: TFrmFrCaixa
     Transaction = DM.FDTransaction1
     UpdateTransaction = DM.FDTransaction1
     TableName = 'frcaixa.item_venda'
-    Left = 368
-    Top = 456
+    Left = 136
+    Top = 296
     object qryItemVendaiditemvenda: TFDAutoIncField
       FieldName = 'iditemvenda'
       Origin = 'iditemvenda'
@@ -2164,8 +2405,8 @@ object FrmFrCaixa: TFrmFrCaixa
       '  produto'
       'WHERE'
       '  codbarra LIKE :cod')
-    Left = 520
-    Top = 288
+    Left = 128
+    Top = 176
     ParamData = <
       item
         Name = 'COD'
@@ -2200,8 +2441,8 @@ object FrmFrCaixa: TFrmFrCaixa
   end
   object dsProduto: TDataSource
     DataSet = DM.qryProduto
-    Left = 328
-    Top = 352
+    Left = 72
+    Top = 576
   end
   object Timer2: TTimer
     Enabled = False

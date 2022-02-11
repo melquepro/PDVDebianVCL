@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9F4ECB6B-AF34-496C-84C1-2C3110822D9E}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="OnyxPDV.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\..\OnyxPDV\OnyxWizard.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="OnyxPDV">
+        <MSBuild Projects="OnyxPDV.dproj"/>
+    </Target>
+    <Target Name="OnyxPDV:Clean">
+        <MSBuild Projects="OnyxPDV.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OnyxPDV:Make">
+        <MSBuild Projects="OnyxPDV.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="OnyxWizard">
+        <MSBuild Projects="..\..\OnyxPDV\OnyxWizard.dproj"/>
+    </Target>
+    <Target Name="OnyxWizard:Clean">
+        <MSBuild Projects="..\..\OnyxPDV\OnyxWizard.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OnyxWizard:Make">
+        <MSBuild Projects="..\..\OnyxPDV\OnyxWizard.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="OnyxPDV;OnyxWizard"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="OnyxPDV:Clean;OnyxWizard:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="OnyxPDV:Make;OnyxWizard:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

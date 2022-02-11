@@ -85,7 +85,7 @@
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-        <DCC_ExeOutput>C:\Users\Melque\Documents\OnyxPDV\bin\</DCC_ExeOutput>
+        <DCC_ExeOutput>C:\Users\Melque\Documents\PDVDebianVCL\PDVDebianVCL\bin\</DCC_ExeOutput>
         <DCC_DcuOutput>C:\Users\Melque\Documents\OnyxPDV\resources\</DCC_DcuOutput>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
@@ -124,61 +124,48 @@
         </DCCReference>
         <DCCReference Include="Views\uConexao.pas">
             <Form>DM</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="Views\uFrmAviso.pas">
             <Form>FrmAviso</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Views\uFrmAvisoProcesso.pas">
             <Form>FrmAvisoProcesso</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Views\uFrmCancelItem.pas">
             <Form>FrmCancelItem</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Views\uFrmConsCliente.pas">
             <Form>FrmConsCliente</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Views\uFrmConsPreco.pas">
             <Form>FrmConsultaPreco</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Views\uFrmConsProduto.pas">
             <Form>FrmConsProduto</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Frame\Frame.AvisoProcessos.pas">
             <Form>FrameAvisoProcesso</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="Frame\Frame.CancelarItem.pas">
             <Form>FrameCancelarItem</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="Frame\Frame.FormaPagamento.pas">
             <Form>FrameFormaPg</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="Frame\Frame.ListItem.pas">
             <Form>FrameListItem</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="Conexao\uConexaoERP.pas">
             <Form>DMConexaoERP</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="Conexao\uDMComERP.pas">
             <Form>DMComERP</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="Classes\Funcao.Classe.pas"/>
@@ -186,43 +173,37 @@
         <DCCReference Include="Classes\uFormat.pas"/>
         <DCCReference Include="Views\Dialog\Balanca.TelaView.pas">
             <Form>FrmBalanca</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Views\Dialog\CancelVenda.TelaView.pas">
             <Form>FrmOpcaoCancelVenda</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Views\Dialog\Esmaecer.TelaFundo.pas">
             <Form>FrmEsmaecerTela</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Views\Dialog\OpcaoPesquisa.TelaView.pas">
             <Form>FrmOpcaoPesquisa</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Views\Dialog\Esmaecer.MsgErro.pas">
             <Form>FrmMsgErro</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Views\Dialog\LoadingItem.TelaView.pas">
             <Form>FrmLoadingItem</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Views\Dialog\OpcaoDescAcres.TelaView.pas">
             <Form>FrmDescAcres</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Views\Dialog\Splash.TelaView.pas">
             <Form>FrmSplash</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Views\Dialog\Tela.LoadingView.pas">
             <Form>FrmCarregaBalanca</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Views\uPrincipal.pas">
             <Form>FrmFrCaixa</Form>
-            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Frame\Frame.ResumoVenda.pas">
+            <Form>FrameResumoVenda</Form>
+            <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -250,7 +231,7 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="bin\OnyxPDV.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\..\OnyxPDV\bin\OnyxPDV.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>OnyxPDV.exe</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -1058,9 +1039,9 @@
                 <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
-                <ProjectRoot Platform="Android64" Name="$(PROJECTNAME)"/>
-                <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Android64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>

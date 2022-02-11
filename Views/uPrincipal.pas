@@ -11,7 +11,8 @@ uses
   FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MySQL, FireDAC.Phys.MySQLDef,
   FireDAC.VCLUI.Wait, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.ComCtrls,
-  Vcl.Buttons, Frame.ListItem, System.Threading, Vcl.Imaging.GIFImg;
+  Vcl.Buttons, Frame.ListItem, System.Threading, Vcl.Imaging.GIFImg,
+  Frame.ResumoVenda;
 
 
 
@@ -74,6 +75,26 @@ type
     pnlDescricao: TPanel;
     EdtDescProduto: TEdit;
     Timer2: TTimer;
+    pgItem: TPageControl;
+    tabItem: TTabSheet;
+    tabSubTotal: TTabSheet;
+    pnl: TPanel;
+    Label1: TLabel;
+    pnlResFundo: TPanel;
+    Panel1: TPanel;
+    Label2: TLabel;
+    Label5: TLabel;
+    Panel2: TPanel;
+    Splitter1: TSplitter;
+    pnlValorPago: TPanel;
+    Label7: TLabel;
+    lblValorPago: TLabel;
+    pnlTroco: TPanel;
+    Label8: TLabel;
+    lblTotalPagar: TLabel;
+    Splitter2: TSplitter;
+    Button1: TButton;
+    sbResumoVenda: TScrollBox;
     procedure Timer1Timer(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
@@ -84,6 +105,11 @@ type
     procedure FormActivate(Sender: TObject);
     procedure FormAfterMonitorDpiChanged(Sender: TObject; OldDPI,
       NewDPI: Integer);
+    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure pgItemDrawTab(Control: TCustomTabControl; TabIndex: Integer;
+      const Rect: TRect; Active: Boolean);
+    procedure Button1Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -99,10 +125,16 @@ type
 
   end;
 
+
+ type
+  tmControl     = class(TControl);
+
+
 var
   FrmFrCaixa: TFrmFrCaixa;
   Frame : TFrameListItem;
 
+  FrameResumo : TFrameResumoVenda;
 
   totalItem: double;
   totalVenda: double;
@@ -321,6 +353,57 @@ if iAtiva then
 
 end;
 
+procedure TFrmFrCaixa.pgItemDrawTab(Control: TCustomTabControl;
+  TabIndex: Integer; const Rect: TRect; Active: Boolean);
+var PC:TPageControl;
+begin
+  PC := TPageControl(Control);
+  PC.Canvas.TextOut(Rect.left+5,Rect.top+3,PC.Pages[tabindex].Caption);
+end;
+
+procedure TFrmFrCaixa.Button1Click(Sender: TObject);
+var
+i : integer;
+begin
+
+    //Essa porta você cria na hora que for fechar a venda que todas informações vai pegar no BD
+    // Nesse Resumo de Venda vai mostrar
+     pgItem.ActivePageIndex := 1;
+     FrameResumo := TFrameResumoVenda.Create(nil);
+    { Cria o Frame do ScrollBox da Lista Resumo da Venda personalizado}
+
+      FrameResumo.Parent:= sbResumoVenda;
+      FrameResumo.Name := 'Itens'+i.ToString;
+      FrameResumo.lblDescResumo.Caption := 'SUBTOTAL';
+      FrameResumo.lblValorResumo.Caption := '150,00';
+      FrameResumo.Align := alTop;
+      FrameResumo.Top := sbResumoVenda.Top + sbResumoVenda.Height;
+      //Frame.Height := 75;
+
+
+      FrameResumo := TFrameResumoVenda.Create(nil);
+      FrameResumo.Parent:= sbResumoVenda;
+      FrameResumo.Name := 'Itens'+i.ToString;
+      FrameResumo.lblDescResumo.Caption := 'ACRÉSCIMO';
+      FrameResumo.lblValorResumo.Caption := '150,00';
+      FrameResumo.Align := alTop;
+      FrameResumo.Top := sbResumoVenda.Top + sbResumoVenda.Height;
+      //Frame.Height := 75;
+
+      FrameResumo := TFrameResumoVenda.Create(nil);
+      FrameResumo.Parent:= sbResumoVenda;
+      FrameResumo.Name := 'Itens'+i.ToString;
+      FrameResumo.lblDescResumo.Caption := 'DESCONTO R$';
+      FrameResumo.lblValorResumo.Caption := '150,00';
+      FrameResumo.Align := alTop;
+      FrameResumo.Top := sbResumoVenda.Top + sbResumoVenda.Height;
+      //Frame.Height := 75;
+
+      //Desabilitar o EdtCodBarra produto e mostra o pnlDesc
+      pnlDescricao.Caption := 'VENDA CONCLUÍDA';
+      FrmFrCaixa.EdtDescProduto.Visible := FALSE;   //deixa o EdtCodBarra visible false
+end;
+
 procedure TFrmFrCaixa.EdtDescProdutoKeyPress(Sender: TObject; var Key: Char);
 begin
  if key = #13 then
@@ -338,6 +421,22 @@ procedure TFrmFrCaixa.FormAfterMonitorDpiChanged(Sender: TObject; OldDPI,
   NewDPI: Integer);
 begin
 //mDescProduto(true);
+end;
+
+procedure TFrmFrCaixa.FormCreate(Sender: TObject);
+var
+tabPages : integer;
+begin
+ pgItem.ActivePageIndex := 0; // TabConfigRede;
+
+   //-------------REMOVE OS TABS CRIADO------------//
+  pgItem.OwnerDraw := true;
+  //for tabPages := 0 to pgItem.PageCount-1 do
+  //begin
+  //TmControl(PageControl1.Pages[i]).Color := clAqua; // Muda a cor do fundo TAB
+  //TmControl(pgItem).Color := clWhite;
+  //TmControl(PageControl1).Font.Color := clYellow;  // Muda a cor da Fonte TAB
+  //end;
 end;
 
 procedure TFrmFrCaixa.FormKeyDown(Sender: TObject; var Key: Word;
@@ -429,8 +528,21 @@ begin
 
   ArredondaPainel(pnlListItem, 12);
   ArredondaPainel(pnlDescricao, 12);
+  ArredondaPainel(pnlResFundo, 12);
+  ArredondaPainel(pnlTroco, 12);
+  ArredondaPainel(pnlValorPago, 12);
 
+end;
 
+procedure TFrmFrCaixa.FormShow(Sender: TObject);
+var
+tabPages : Integer;
+begin
+for tabPages := 0 to pgItem.PageCount - 1 do
+ begin
+  pgItem.Pages[tabPages].TabVisible := false;
+ end;
+  pgItem.ActivePageIndex := 0;
 end;
 
 procedure TFrmFrCaixa.Timer1Timer(Sender: TObject);
@@ -438,6 +550,7 @@ begin
 
    lblDataHora.Caption :=  SoPrimeiraLetraMaiuscula(FormatDateTime('DDDD'', ''MM'' de ''MMM'' ''hh:MM', now ));
    ShowScrollBar (lbListProdutos.Handle, SB_VERT, FALSE); // Remove o ScrollBox do DBGrid
+   ShowScrollBar (sbResumoVenda.Handle, SB_VERT, FALSE); // Remove o ScrollBox do DBGrid
 end;
 
 

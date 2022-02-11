@@ -1,5 +1,11 @@
 program OnyxPDV;
 
+{
+Apocalipse 22
+…20 Aquele que dá testemunho destas palavras afirma: “Com toda a certeza, venho rapidamente!” Amém. Vem, Senhor Jesus!
+.21 A graça do Senhor Jesus seja com todos. Amém!
+}
+
 uses
   Vcl.Forms,
   uFrmReforcoCaixa in 'Views\uFrmReforcoCaixa.pas' {FrmReforcoCaixa},
@@ -33,7 +39,8 @@ uses
   OpcaoDescAcres.TelaView in 'Views\Dialog\OpcaoDescAcres.TelaView.pas' {FrmDescAcres},
   Splash.TelaView in 'Views\Dialog\Splash.TelaView.pas' {FrmSplash},
   Tela.LoadingView in 'Views\Dialog\Tela.LoadingView.pas' {FrmCarregaBalanca},
-  uPrincipal in 'Views\uPrincipal.pas' {FrmFrCaixa};
+  uPrincipal in 'Views\uPrincipal.pas' {FrmFrCaixa},
+  Frame.ResumoVenda in 'Frame\Frame.ResumoVenda.pas' {FrameResumoVenda: TFrame};
 
 {$R *.res}
 
@@ -47,7 +54,6 @@ begin
   Application.CreateForm(TFrmEsmaecerTela, FrmEsmaecerTela);
   Application.CreateForm(TDMConexaoERP, DMConexaoERP);
   Application.CreateForm(TDMComERP, DMComERP);
-
   Application.Run;
 
 end.
