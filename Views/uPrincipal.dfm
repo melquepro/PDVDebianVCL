@@ -1559,7 +1559,7 @@ object FrmFrCaixa: TFrmFrCaixa
     Top = 156
     Width = 749
     Height = 591
-    ActivePage = tabItem
+    ActivePage = tabSubTotal
     Anchors = [akTop, akRight, akBottom]
     Style = tsFlatButtons
     TabOrder = 3
@@ -1948,7 +1948,7 @@ object FrmFrCaixa: TFrmFrCaixa
         object pnlTroco: TPanel
           Left = 401
           Top = 0
-          Width = 344
+          Width = 340
           Height = 102
           Align = alLeft
           Alignment = taLeftJustify
@@ -1973,7 +1973,7 @@ object FrmFrCaixa: TFrmFrCaixa
             AlignWithMargins = True
             Left = 3
             Top = 34
-            Width = 338
+            Width = 334
             Height = 65
             Align = alBottom
             Caption = '0,00'
