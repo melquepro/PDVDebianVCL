@@ -151,7 +151,7 @@ uses uFrmCancelItem,
   Funcao.Classe, Balanca.TelaView, uFrmReforcoCaixa,
   OpcaoPesquisa.TelaView, CancelVenda.TelaView,
   uFrmConsProduto, uFrmConsCliente, uFrmLoading, uFrmFormaPagamento,
-  uFrmEntrega;
+  uFrmEntrega, uFrmImpOrcamento;
 
 
 
@@ -393,7 +393,7 @@ begin
       FrameResumo := TFrameResumoVenda.Create(nil);
       FrameResumo.Parent:= sbResumoVenda;
       FrameResumo.Name := 'Itens'+i.ToString;
-      FrameResumo.lblDescResumo.Caption := 'DESCONTO R$';
+      FrameResumo.lblDescResumo.Caption := 'DESCONTO E PROMOÇÕES';
       FrameResumo.lblValorResumo.Caption := '150,00';
       FrameResumo.Align := alTop;
       FrameResumo.Top := sbResumoVenda.Top + sbResumoVenda.Height;
@@ -443,6 +443,12 @@ procedure TFrmFrCaixa.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
 
+
+if key = VK_INSERT then
+begin
+  FrmImpOrcamento := TFrmImpOrcamento.create(self);
+  FrmImpOrcamento.ShowModal;
+end;
 
 if key = VK_SPACE then
 begin

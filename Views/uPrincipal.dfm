@@ -681,7 +681,6 @@ object FrmFrCaixa: TFrmFrCaixa
     Color = 5121313
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1133
     object pnlLogo: TPanel
       Left = 1007
       Top = 0
@@ -692,7 +691,6 @@ object FrmFrCaixa: TFrmFrCaixa
       Color = 5121313
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 996
       object imgLogo: TImage
         AlignWithMargins = True
         Left = 3
@@ -1466,7 +1464,6 @@ object FrmFrCaixa: TFrmFrCaixa
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1080
     object EdtDescProduto: TEdit
       Left = 0
       Top = 0
@@ -1502,7 +1499,6 @@ object FrmFrCaixa: TFrmFrCaixa
     Color = 5121313
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 1133
     object lblCxOperador: TLabel
       AlignWithMargins = True
       Left = 10
@@ -1550,7 +1546,6 @@ object FrmFrCaixa: TFrmFrCaixa
       ParentFont = False
       Layout = tlCenter
       StyleName = 'Windows'
-      ExplicitLeft = 877
       ExplicitHeight = 25
     end
   end
@@ -1559,7 +1554,7 @@ object FrmFrCaixa: TFrmFrCaixa
     Top = 156
     Width = 749
     Height = 591
-    ActivePage = tabItem
+    ActivePage = tabSubTotal
     Anchors = [akTop, akRight, akBottom]
     Style = tsFlatButtons
     TabOrder = 3
@@ -1576,7 +1571,6 @@ object FrmFrCaixa: TFrmFrCaixa
         Color = 7290415
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 870
         object lbListProdutos: TScrollBox
           Left = 0
           Top = 49
@@ -1592,7 +1586,6 @@ object FrmFrCaixa: TFrmFrCaixa
           Color = clWhite
           ParentColor = False
           TabOrder = 0
-          ExplicitWidth = 870
         end
         object pnlNomeCliente: TPanel
           Left = 0
@@ -1605,7 +1598,6 @@ object FrmFrCaixa: TFrmFrCaixa
           Padding.Left = 10
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 870
           object lblNomeCliente: TLabel
             Left = 10
             Top = 0
@@ -1634,7 +1626,6 @@ object FrmFrCaixa: TFrmFrCaixa
           Color = 5121313
           ParentBackground = False
           TabOrder = 2
-          ExplicitWidth = 870
           object pnlTotal: TPanel
             Left = 544
             Top = 0
@@ -1656,7 +1647,6 @@ object FrmFrCaixa: TFrmFrCaixa
             ParentFont = False
             TabOrder = 0
             VerticalAlignment = taAlignTop
-            ExplicitLeft = 673
             object Label4: TLabel
               Left = 0
               Top = 0
@@ -1790,7 +1780,6 @@ object FrmFrCaixa: TFrmFrCaixa
         Color = clWhite
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 870
         object pnl: TPanel
           Left = 0
           Top = 0
@@ -1802,7 +1791,6 @@ object FrmFrCaixa: TFrmFrCaixa
           Padding.Left = 10
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 870
           object Label1: TLabel
             Left = 10
             Top = 0
@@ -1831,7 +1819,6 @@ object FrmFrCaixa: TFrmFrCaixa
           Color = 5121313
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 870
           object Label2: TLabel
             AlignWithMargins = True
             Left = 588
@@ -1849,7 +1836,6 @@ object FrmFrCaixa: TFrmFrCaixa
             ParentBiDiMode = False
             ParentFont = False
             Layout = tlCenter
-            ExplicitLeft = 717
             ExplicitHeight = 71
           end
           object Label5: TLabel
@@ -1879,7 +1865,6 @@ object FrmFrCaixa: TFrmFrCaixa
           BevelOuter = bvNone
           BorderStyle = bsNone
           TabOrder = 2
-          ExplicitWidth = 870
         end
       end
       object Panel2: TPanel
@@ -1892,7 +1877,6 @@ object FrmFrCaixa: TFrmFrCaixa
         Color = 12612715
         ParentBackground = False
         TabOrder = 1
-        ExplicitTop = 459
         object Splitter1: TSplitter
           AlignWithMargins = True
           Left = 380

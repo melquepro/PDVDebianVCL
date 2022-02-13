@@ -17,7 +17,7 @@ uses
   uConexao in 'Views\uConexao.pas' {DM: TDataModule},
   uFrmAviso in 'Views\uFrmAviso.pas' {FrmAviso},
   uFrmAvisoProcesso in 'Views\uFrmAvisoProcesso.pas' {FrmAvisoProcesso},
-  uFrmCancelItem in 'Views\uFrmCancelItem.pas' {FrmCancelItem},
+  uFrmImpOrcamento in 'Views\uFrmImpOrcamento.pas' {FrmImpOrcamento},
   uFrmConsCliente in 'Views\uFrmConsCliente.pas' {FrmConsCliente},
   uFrmConsPreco in 'Views\uFrmConsPreco.pas' {FrmConsultaPreco},
   uFrmConsProduto in 'Views\uFrmConsProduto.pas' {FrmConsProduto},
@@ -40,7 +40,8 @@ uses
   Splash.TelaView in 'Views\Dialog\Splash.TelaView.pas' {FrmSplash},
   Tela.LoadingView in 'Views\Dialog\Tela.LoadingView.pas' {FrmCarregaBalanca},
   uPrincipal in 'Views\uPrincipal.pas' {FrmFrCaixa},
-  Frame.ResumoVenda in 'Frame\Frame.ResumoVenda.pas' {FrameResumoVenda: TFrame};
+  Frame.ResumoVenda in 'Frame\Frame.ResumoVenda.pas' {FrameResumoVenda: TFrame},
+  uFrmCancelItem in 'Views\uFrmCancelItem.pas' {FrmCancelItem};
 
 {$R *.res}
 
